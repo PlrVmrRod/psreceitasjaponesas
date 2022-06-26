@@ -432,7 +432,7 @@
     <script src="./assets/js/com.js"></script>
 
     <script>
-      var showButtonAt = 2196;
+      var showButtonAt = 2096;
       var showCommentsAt = 2405;
       var videoId = "5iqgd4d8oe";
       var firstButtonIdToDisable = "cta1";
@@ -450,15 +450,15 @@
                   if (video.time() >= showButtonAt && videoTrigger !== true) {
                       videoTrigger = true;
                       document.getElementById("cta1").classList.remove("d-none")
-                      document.getElementById("cta2").classList.remove("d-none")
                       document.getElementById(firstButtonIdToDisable).style.display = "inline";
                       document.getElementById(firstButtonIdToDisable).style.visibility = "visible";
-                      document.getElementById(secondButtonIdToDisable).style.display = "inline";
-                      document.getElementById(secondButtonIdToDisable).style.visibility = "visible";
                     }
                     
-                  if (video.time() >= showCommentsAt) {
-                    document.getElementById("fb-comment1").classList.remove("d-none")
+                    if (video.time() >= showCommentsAt) {
+                      document.getElementById("fb-comment1").classList.remove("d-none")
+                      document.getElementById("cta2").classList.remove("d-none")
+                      document.getElementById(secondButtonIdToDisable).style.display = "inline";
+                      document.getElementById(secondButtonIdToDisable).style.visibility = "visible";
                   }
               });
           }
